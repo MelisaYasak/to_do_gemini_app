@@ -1,0 +1,9 @@
+FROM python:3.12
+
+WORKDIR /codde
+
+COPY ./requirements.txt /code/requirements.txt
+
+RUN pip install --no-cach-dir --upgrade -r /code/requirements.txt
+
+COPY ./ /code/app
