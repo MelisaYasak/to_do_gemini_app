@@ -1,10 +1,10 @@
 from fastapi import Body, Depends, Path, HTTPException, APIRouter, Request
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
-from db import Base, SessionLocal
+from ..db import Base, SessionLocal
 from typing import Annotated
 from sqlalchemy.orm import Session
-from models.m_todo.todo import Todo
+from ..models.m_todo.todo import Todo
 from starlette import status
 from starlette.responses import RedirectResponse
 from routers.auth.auth import get_current_user
@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 
 router = APIRouter( prefix="/todo", tags=["ToDo"])
 
-templates= Jinja2Templates(directory="frontend/templates")
+templates= Jinja2Templates(directory="app/frontend/templates")
 #for creating post methods, you should create Request model which inherted from BaseModel
 class TodoRequest(BaseModel):
     title: str = Field(min_length=3)

@@ -1,6 +1,6 @@
-from db import Base
+from ..db import Base
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
-from models.m_user.user import User
+from ..m_user.user import User
 
 
 class Todo(Base):
