@@ -11,17 +11,15 @@ This project is an **AI-assisted task planner web application** built with FastA
 - 🐳 Docker support for easy deployment
 
 ## 🧱 Project Structure
-
-.
-├── alembic/ # Alembic migration files
-├── frontend/ # HTML / CSS files
-├── models/ # SQLAlchemy models
-├── routers/ # FastAPI routers
-├── db.py # Database connection setup
-├── main.py # FastAPI application entry point
-├── DockerFile # Docker image definition
-├── docker-compose.yaml # Docker service orchestration
-├── requirements.txt # Python dependencies
+─ alembic/ # Alembic migration files
+─ frontend/ # HTML / CSS files
+─ models/ # SQLAlchemy models
+─ routers/ # FastAPI routers
+─ db.py # Database connection setup
+─ main.py # FastAPI application entry point
+─ DockerFile # Docker image definition
+─ docker-compose.yaml # Docker service orchestration
+─ requirements.txt # Python dependencies
 
 ## ⚙️ Installation
 
@@ -35,12 +33,12 @@ This project is an **AI-assisted task planner web application** built with FastA
 ```bash
 docker-compose up --build
 
-```bash
+```
 3. Start Manually (without Docker)
 ```bash
 pip install -r requirements.txt
 uvicorn main:app --reload
-```bash
+```
 
 # 🧪 Usage
 Visit http://localhost:8000 in your browser.
